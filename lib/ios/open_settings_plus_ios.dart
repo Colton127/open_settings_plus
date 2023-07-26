@@ -20,6 +20,9 @@ class OpenSettingsPlusIOS extends OpenSettingsPlus {
   Future<bool> settings() {
     return sendCustomMessage('App-prefs:');
   }
+  Future<bool> custom(String prefs) {
+    return sendCustomMessage(prefs);
+  }
 
   /// Open iOS settings in `About` section.
   /// returns operation successful or failure.
