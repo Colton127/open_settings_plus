@@ -42,6 +42,11 @@ class OpenSettingsPlusIOS extends OpenSettingsPlus {
     return sendCustomMessage('App-prefs:ACCESSIBILITY');
   }
 
+  /// Open iOS VoiceOver Speech settings.
+  Future<bool> speech() {
+    return sendCustomMessage('App-prefs:ACCESSIBILITY&path=VOICEOVER_TITLE/Speech#DialectCell');
+  }  
+
   /// Open iOS settings in `Account Settings` section.
   /// returns operation successful or failure.
   Future<bool> accountSettings() {
